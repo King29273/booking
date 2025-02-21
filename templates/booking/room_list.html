@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for room in rooms %}
+<a href="{% url 'room_details' room.pk %}">
+room: {{ room.number }}
+</a>
+
+<h2>
+capacity: {{ room.capacity }}    
+</h2>
+{% endfor %}
+{% endblock %}
